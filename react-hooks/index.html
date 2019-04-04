@@ -25,12 +25,113 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown>
-					## React Hooks
-
-					Introduction to the new addition to the React library.
+				<section>
+					<h2>React Hooks</h2>
+					<p>Introduction to the new addition to the React library.</p>
 				</section>
-				<section>Slide 2</section>
+				<section>
+					<h3>What are Hooks?</h3>
+					<ul>
+						<li>Adds local states and lifecycles to functional components</li>
+						<li>Use all/most React features without using React built in classes</li>
+						<li>Render Props and Higher Order Components allow some ways to reuse behavior to a component </li>
+					</ul>
+				</section>
+				<section>
+					<h3>React Class vs functions</h3>
+					<ul>
+						<li>Functional component are much easier to read and test because they are plain JavaScript functions without state or lifecycle-hooks.</li>
+						<li>Without hooks React cLasses are the only way to have access to local states and lifecycles.</li>
+						<li>Easier to separate container and presentational components because you need to think more about your component’s state if you don’t have access to setState() in your component.</li>
+						<li>File size is reduced if you are using functional components over classes.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How to use Hooks?</h3>
+					<ul>
+						<li>Hooks are now available with the release of v16.8.0</li>
+						<li>Only Call Hooks at the Top Level</li>
+						<li>Only Call Hooks from React Functions</li>
+					</ul>
+				</section>
+				<section>
+					<h3>UseState</h3>
+					<ul>
+						<li>Use React State within functional components</li>
+						<li>Updating a state variable always replaces it instead of merging it</li>
+						<li>React will remember its current value between re-renders, and provide the most recent one to our function</li>
+					</ul>
+				</section>
+				<section>
+					<h3>UseEffect</h3>
+					<ul>
+						<li>Effect Hook lets you perform side effects in function components</li>
+						<li>Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects</li>
+						<li>Think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined</li>
+						<li>We can use multiple useEffect() within a component.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Demo 1</h2>
+				</section>
+				<section>
+					<h3>Create your own hooks</h3>
+					<ul>
+						<li>Components and Hooks are just functions</li>
+						<li>If you want to share reuseable logic, just extract it to a seperate function</li>
+						<li>Hooks always start with a use keyword for linting purposes (useState,useEffect,useReducer)</li>
+						<li>Using useState and useEffect you can already create useful custom hooks</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Demo 2</h2>
+				</section>
+				<section>
+					<h3>UseContext</h3>
+					<ul>
+						<li>Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.</li>
+						<li>Accepts a context object (the value returned from React.createContext) and returns the current context value for that context.</li>
+						<li>Easier to use multiple Context Providers without having nest components or using render props</li>
+					</ul>
+				</section>
+				<section>
+					<h3>UseRef</h3>
+					<ul>
+						<li>Provide a way to access DOM nodes or React elements</li>
+						<li>Examples:Managing focus and text selection, third-party DOM libraries, Web Animation API</li>
+						<li>useRef is like a “box” that can hold a mutable value in its .current property without causing rerenders</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Demo 3</h2>
+				</section>
+				<section>
+					<h3>Should I Switch?</h3>
+					<ul>
+						<li>You do not need to rewrite all of your components with react hooks</li>
+						<li>You can try Hooks in a few components without rewriting any existing code</li>
+						<li>100% backwards-compatible</li>
+						<li>React Classes will still be supported in the future and there is no plans to remove them</li>
+						<li>Best practices are still a work in progress</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Libraries that already use Hooks</h2>
+					<ul>
+						<li><a href="https://www.react-spring.io/">React Spring</a></li>
+						<li><a href="https://github.com/rehooks/awesome-react-hooks">Awesome React Hooks</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://overreacted.io/">Dan Abramov Blog</a></li>
+						<li><a href="https://syntax.fm/show/092/react-hooks">Syntax.fm podcast about React Hooks</a></li>
+						<li><a href="https://reactjs.org/docs/hooks-intro.html">React Documentation</a></li>
+						<li><a href="https://usehooks.com/">React Hooks Recipe Newsletter</a></li>
+						<li><a href="https://www.youtube.com/watch?v=jd8R0a2Ur8Q">Harry Wolff</a></li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
